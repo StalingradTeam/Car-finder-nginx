@@ -1,0 +1,7 @@
+data
+venv_car/
+venv/
+.env
+app.log
+data.xml
+db.sqlite3
