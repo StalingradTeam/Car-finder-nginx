@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Car</title>
+   <meta charset="utf-8">
+   <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+   {% load bootstrap4 %}
+   
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+   <style>
+
+   </style>
+ </head>
+ <body>
+  <body style="background-color: silver;">
+<ul >
+    {% for cr in my_car %}
+    <li >{{ cr }}</li>
+    {% endfor %}
+</ul>
+<form action="{% url 'main' %}" method='GET' class="col-3">
+    <label for="manufacturer"> Фирма: </label>
+    <input id="manufacturer" type="text" name="manufacturer">
+    <br>
+    <label for="model"> Модель: </label>
+    <input id="model" type="text" name="model">
+    <br>
+    <label for="year_start"> Год: </label>
+    <input id="year_start" type="number" name="year_start">
+    <br>
+    <label for="transmission" > Коробка передач: </label>
+    <select name="transmission" id="transmission">
+        <option value="1"> МКПП </option>
+        <option value="2"> АКПП </option>
+        <option value="3"> Роботизированная </option>
+    </select>
+    <br>
+    <label for="year_start"> Цвет: </label>
+    <input id="color" type="text" name="name_field">
+    <br><br>
+    <input type="submit" value="Применить" class='btn-danger'>
+</form>
+</body> 
+</html>
