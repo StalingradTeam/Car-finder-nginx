@@ -1,5 +1,7 @@
     # Cars finder #
 
+конфигурация nginx лежит в папке etc/nginx/sites-available/car.conf
+
 склонировать репозиторий, перейти в папку с ним
 
 python -m venv
